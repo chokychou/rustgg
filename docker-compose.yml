@@ -1,8 +1,8 @@
 version: "3.7"
 
 services:
-  app:
-    build: app
+  backend:
+    build: backend
     container_name: rustgg-server
     restart: always
     env_file:
@@ -20,4 +20,4 @@ services:
     volumes:
       - ./nginx:/etc/nginx/conf.d
     depends_on:
-      - app
+      - backend
