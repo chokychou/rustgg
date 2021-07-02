@@ -1,0 +1,25 @@
+.Login {
+    display: block;
+    padding: 60px 0;
+}
+
+.form-group {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.form-group .text {
+    font-weight: bold;
+    color: black;
+}
+
+@media all and (min-width: 380px) {
+    .Login {
+      padding: 60px 0;
+    }
+  
+    .Login form {
+      margin: 0 auto;
+      max-width: 320px;
+    }
+  }
