@@ -6,8 +6,6 @@ import Sidebar from './Sidebars';
 
 import "./Nav.css";
 
-console.log(logo);
-
 export default class HomePageLogo extends Component {
     render() {
         function handleSubmit(e) {

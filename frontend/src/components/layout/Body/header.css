@@ -1,12 +1,14 @@
-#disNserver a{
-    display: inline-block;
-    text-decoration: none;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 40px;
-    padding-right: 40px;
-    margin: 0px;
-    height:400px,
+#headerDiv .bg {
+    width: auto; /* Scale the div to the parent width */
+    background-size: 100%; /* Always size the image to the width of the div */
+    background-position: top; /* Position the image to the top center of the div */
 }
 
-    
+/* For any viewports less than 1000px wide */
+@media (max-width: 1000) {
+    #headerDiv .bg {
+        background-size: 500px 500px; /* Force the image to its minimum width */
+        min-width: 1000px;
+    }
+
+}
