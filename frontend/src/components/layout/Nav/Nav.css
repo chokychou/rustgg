@@ -40,14 +40,24 @@ float: right;
 #navElements a{
     font-size:15px;
 }
+#dropdownMenu {
+  display: none;
+}
 
 #dropdownMenuButton{
   position: relative;
   z-index: 99999;
 }
 
-@media screen and (max-width: 580px) {
+.nav-height-short {
+  height: 103px;
+}
 
+.nav-height-tall {
+  height: 200px;
+}
+
+@media screen and (max-width: 580px) {
 #navbar a {
     float: none;
     text-align: left;
@@ -55,8 +65,10 @@ float: right;
 #navbar-right {
     float: none;
 }
+.nav-height-short {
+  height: 80px;
 }
-
+}
 
 #subnavbar button.icon {
     display: none;
@@ -76,4 +88,23 @@ float: right;
     right: 0;
     top: 0;
     }
-    }
+  }
+
+@media screen and (max-width: 580px) {
+  .dropdown-menu{
+    right: 0px;
+  }
+}
+
+.dropdown-menu-button0{
+  display: none;
+}
+
+.dropdown-menu-button1{
+  display: block;
+}
+
+.button-disappear{
+  display: none;
+  visibility: hidden;
+}

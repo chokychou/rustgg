@@ -15,7 +15,6 @@ export default class Servers_sg extends Component {
                 <div className="cta-container transition">
                     <a href="#" className="cta">Button</a>
                     </div>
-                <div className="card_circle transition"></div>
             </div>
 
         )
