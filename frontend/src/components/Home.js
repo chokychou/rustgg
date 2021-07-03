@@ -14,7 +14,6 @@ export default class Home extends Component {
     render() {
         return (
             <div className ="react" id="ReactWrapper" style={divStyle}>
-                <LogoWrapper />
                 <NavWrapper />
                 <BodyWrapper />
             </div>
