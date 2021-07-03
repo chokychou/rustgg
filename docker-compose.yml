@@ -26,10 +26,10 @@ services:
     image: nginx:1.17
     container_name: ngx
     ports:
-      - "80:8080"
+      - "8080:8080"
     volumes:
-      - ./nginx/ginx-setup.config:/etc/nginx/conf.d
-      - react_build:/var/www/react
+      - ./nginx:/etc/nginx/conf.d
+      - react_build:/var/www
     depends_on:
       - backend
       - frontend
