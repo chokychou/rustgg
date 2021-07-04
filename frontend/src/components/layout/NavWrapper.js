@@ -8,7 +8,6 @@ export default class NavWrapper extends Component {
         return (
             <div className="NavWrapper nav-height-short" id="NavWrapper">
                 <HomePageLogo />
-                <LogoWrapper />
             </div>
         )
     }

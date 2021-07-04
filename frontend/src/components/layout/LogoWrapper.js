@@ -2,12 +2,10 @@ import React, { Component } from 'react'
 import { ReactComponent as SvgLogo } from "./Body/assets/logo.svg";
 
 var bottom = {
-    margin: "0 auto",
-    position: "relative",
-    top: "-2%",
+    display:"block",
+    position: "absolute",
     zIndex:9999,
-    width: "50%",
-    height: "30%",
+    width: "100%"
   }
   
 var position_zero = {
@@ -15,13 +13,19 @@ var position_zero = {
     paddingBottom: "0px",
     paddingLeft: "0px",
     paddingRight: "0px",
+    justifyContent: "center",
+    alignItems: "center",
+    margin: "auto",
+    width: "100%",
+    textAlign: "center",
 }
+
 export default class LogoWrapper extends Component {
     render() {
         return (
-            <div className="LogoWrapper" style={ bottom } id="disNserver">
-                <a href="https://discord.gg/2rG76JRQ" style={ position_zero }>
-                    <SvgLogo style={{ fill: "green" }} />
+            <div className="" style={ bottom } >
+                <a href="https://discord.gg/2rG76JRQ" >
+                    <SvgLogo style={{ fill: "green" }} style={ position_zero } />
                 </a>
             </div>
         )
