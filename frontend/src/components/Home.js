@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 
 import NavWrapper from './layout/NavWrapper';
 import LogoWrapper from './layout/LogoWrapper.js';

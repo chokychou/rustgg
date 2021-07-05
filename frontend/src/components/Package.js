@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 
 import NavWrapper from './layout/NavWrapper';
-import LoginWrapper from './layout/LoginWrapper';
+import PackageWrapper from './layout/PackageWrapper';
 
 const divStyle = {
     color: 'blue',
 };
 
-export default class Membership extends Component {
+export default class Package extends Component {
     render() {
         return (
             <div className ="react" id="ReactWrapper" style={divStyle}>
                 <NavWrapper />
-                <LoginWrapper />
+                <PackageWrapper />
             </div>
         )
     }

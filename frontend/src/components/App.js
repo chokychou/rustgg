@@ -8,10 +8,10 @@ import {
 } from "react-router-dom";
 
 import Home from './Home'
-import Membership from './Membership'
+import Package from './Package'
 import RulesFAQ from './RulesFAQ'
 import Servers from './Servers'
-
+import Payment from './Payment'
 
 class App extends Component {
     render() {
@@ -19,8 +19,12 @@ class App extends Component {
           <Router>
             <div>
               <Switch>
-                <Route path="/membership">
-                  <Membership />
+                <Route path="/payment">
+                  <Payment />
+                </Route>
+
+                <Route path="/package">
+                  <Package />
                 </Route>
 
                 <Route path="/rules">

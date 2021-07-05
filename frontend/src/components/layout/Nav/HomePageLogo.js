@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import logo from './assets/logo.png';
 import dropDown from './assets/drop-down-arrow.svg';
 import Sidebar from './Sidebars';
 
@@ -27,11 +26,11 @@ export default class HomePageLogo extends Component {
                 <Sidebar />
 
                 <div className="dropdown" id="subnavbar">
-                <button id="dropdownMenuButton" className="w3-right icon w3-bar-item btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false" onClick={handleSubmit} title="show more" style={{disply:"none"}}/>
+                <button className="w3-right icon w3-bar-item btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false" onClick={handleSubmit} title="show more" style={{disply:"none"}}/>
                     <div className="dropdown-menu dropdown-menu-button0" aria-labelledby="dropdownMenuButton" id="dropdownMenu">
                     <a className="dropdown-item" href="/servers">Servers</a>
                     <a className="dropdown-item" href="/rules">Rules & FAQ</a>
-                    <a className="dropdown-item" href="/membership">Login</a>
+                    <a className="dropdown-item" href="/package">Package</a>
                     </div>
                 </div>
             </div>

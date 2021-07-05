@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-
 import NavWrapper from './layout/NavWrapper';
-import ServerWrapper from './layout/ServerWrapper';
+import PaymentWrapper from './layout/PaymentWrapper';
 
 const divStyle = {
     color: 'blue',
@@ -12,7 +11,7 @@ export default class RulesFAQ extends Component {
         return (
             <div className ="react" id="ReactWrapper" style={divStyle}>
                 <NavWrapper />
-                <ServerWrapper />
+                <PaymentWrapper />
             </div>
         )
     }
