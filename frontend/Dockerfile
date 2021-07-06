@@ -4,7 +4,10 @@ FROM node:13.12.0-alpine
 # set working directory
 WORKDIR /frontend
 
-ENV PATH /frontend/node_modules/.bin:$PATH
+COPY package.json /frontend
+
+RUN npm install --save --silent
+RUN npm install react-scripts@latest -g --silent
 
 # add app
 COPY . .

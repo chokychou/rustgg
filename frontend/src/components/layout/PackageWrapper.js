@@ -11,19 +11,19 @@ export default class PackageWrapper extends Component {
                     <span> &nbsp;</span>
                     <div className="card text-center" style={{ width: "auto"}} id="Singapore">
                         <div className="card-body">
-                            <h5 class="card-title">Server VIP</h5>
+                            <h5 className="card-title">Server VIP</h5>
                             <span> &nbsp;</span>
-                            <h1 class="card-title pricing-card-title">$5</h1>
+                            <h1 className="card-title pricing-card-title">$5</h1>
                             <span> &nbsp;</span>
                         </div>
-                        <ul class="list-group list-group-flush">
+                        <ul className="list-group list-group-flush">
                             <li> &nbsp;</li>
                             <li><strong>Benefits:</strong></li>
 
                             <li>Unban</li>
                             <li> &nbsp;</li>
                         </ul>
-                            <a href="/payment" class="btn btn-primary btn-lg active btn-block" role="button" aria-pressed="true">Buy it Now!</a>
+                            <a href="/payment" className="btn btn-primary btn-lg active btn-block" role="button" aria-pressed="true">Buy it Now!</a>
                     </div>
                 </div>
             </div>

@@ -46,8 +46,8 @@ export default class Header extends Component {
         return (
             <div id="headerDiv" style={ container }>
                 <LogoWrapper />
-                {this.state.matches && <SvgBg class="bg" style={ sectionStyle }/>}
-                {!this.state.matches && <SvgBg viewBox="250 0 500 929"  class="bg" style={ sectionStyle }/>}
+                {this.state.matches && <SvgBg className="bg" style={ sectionStyle }/>}
+                {!this.state.matches && <SvgBg viewBox="250 0 500 929"  className="bg" style={ sectionStyle }/>}
             </div>
         )
     }
