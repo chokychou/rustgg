@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import { PayPalButton } from "react-paypal-button-v2";
+
+import Paypal_Button from './Paypal_Button'
 import alipay from "./src/alipay.svg"
 import wechat from "./src/wechat.svg"
 import paypal from "./src/paypal.svg"
@@ -20,6 +23,7 @@ export default class PaymentSelect extends Component {
         this.state = {
           STEAM_ID: "",
           METHOD_OF_PAYMENT: "",
+          isCheckout: false,
         };
         
         this.publish = this.publish.bind(this);
@@ -46,9 +50,17 @@ export default class PaymentSelect extends Component {
     publish() {
         console.log( this.state.STEAM_ID );
         console.log( this.state.METHOD_OF_PAYMENT );
+        this.setState({ isCheckout: true });
+        console.log( this.state.isCheckout );
     }
 
     render() {
+        if (this.state.isCheckout && this.state.METHOD_OF_PAYMENT=="paypal") {
+            return (<Paypal_Button 
+                    steam_id={this.state.STEAM_ID}
+                    />)
+        }
+
         return (
             <div className="PaymentSelect">
                 <div className="container">
@@ -86,7 +98,29 @@ export default class PaymentSelect extends Component {
                 </form>
                 <button type="submit" className="btn btn-primary" onClick={ this.publish }>Show selection</button>
 
+
+                <PayPalButton
+                    amount="5"
+                    // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
+                    onSuccess={(details, data) => {
+                    alert("Transaction completed by " + details.payer.name.given_name);
+
+                    // OPTIONAL: Call your server to save the transaction
+                    return fetch("/paypal-transaction-complete", {
+                        method: "post",
+                        body: JSON.stringify({
+                            orderID: data.orderID,
+                            steam_id: this.state.STEAM_ID
+                        })
+                    });
+                    }}
+
+                    options={{
+                        clientId: "VBB9DWZSGCPC4"  //"PRODUCTION_CLIENT_ID"
+                      }}
+                />    
+
             </div>
         )
     }
-}
+}   
