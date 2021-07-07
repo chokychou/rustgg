@@ -47,10 +47,10 @@ export default class LogoWrapper extends Component {
     render() {
         return (
             <div className="" style={ bottom } >
-                {this.state.matches && <a href="https://discord.gg/2rG76JRQ" >
+                {this.state.matches && <a href="https://discord.gg/QgWBfc8Ced" >
                     <SvgLogo style={{ fill: "green" }} style={ position_zero } />
                 </a>}
-                {!this.state.matches && <a href="https://discord.gg/2rG76JRQ" >
+                {!this.state.matches && <a href="https://discord.gg/QgWBfc8Ced" >
                     <SvgLogo style={{ fill: "green" }} style={ fill } />
                 </a>}
 
