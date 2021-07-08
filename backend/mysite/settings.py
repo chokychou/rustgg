@@ -12,16 +12,18 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 import ast
 from pathlib import Path
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
-
+load_dotenv()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('MYSITE_SECRET_KEY', 'dev')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = ast.literal_eval(os.getenv('DEBUG', 'True'))
@@ -38,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'mysite',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -74,11 +79,14 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('DATABASE_NAME', 'DATABASE_NAME'),
+        'HOST': 'batyr.db.elephantsql.com',
+        'USER': os.getenv('DATABASE_NAME', 'DATABASE_NAME'),
+        'PASSWORD': os.getenv('DATABASE_KEY', 'DATABASE_KEY'),
+        'PORT': '5432'
     }
 }
 
