@@ -23,19 +23,24 @@ export default class PaymentSelect extends Component {
         this.state = {
           STEAM_ID: "",
           METHOD_OF_PAYMENT: "",
-          isCheckout: false,
         };
         
-        this.publish = this.publish.bind(this);
         this.assignID = this.assignID.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.state = { showMessage: false };
       }
 
     options = [
-        { label: "Alipay", value: "alipay"},
-        { label: "Wechat Pay", value: "wechat"},
+        //{ label: "Alipay", value: "alipay"},
+        //{ label: "Wechat Pay", value: "wechat"},
         { label: "Paypal", value: "paypal"}
     ];
+
+    _showMessage = (bool) => {
+        this.setState({
+          showMessage: bool
+        });
+    }
 
     handleChange = (selectedOption) => {
         this.setState({ METHOD_OF_PAYMENT: selectedOption.value });
@@ -47,12 +52,6 @@ export default class PaymentSelect extends Component {
         });
     }
 
-    publish() {
-        console.log( this.state.STEAM_ID );
-        console.log( this.state.METHOD_OF_PAYMENT );
-        this.setState({ isCheckout: true });
-        console.log( this.state.isCheckout );
-    }
 
     render() {
         if (this.state.isCheckout && this.state.METHOD_OF_PAYMENT=="paypal") {
@@ -87,38 +86,43 @@ export default class PaymentSelect extends Component {
                
                 <div className="col-12">
                     <div classname="form-check">
-                        <input classname="form-check-input" type="checkbox" value="" id="invalidCheck" required />
-                        <label classname="form-check-label" htmlFor="invalidCheck">
+                        <input classname="form-check-input" type="checkbox" value="" id="invalidCheck" required onClick={this._showMessage.bind(null, true)} />
+                        <label classname="form-check-label" htmlFor="invalidCheck" >
                         I have correctly entered the Steam ID.
                         </label>
 
                     </div>
+                    {/*
                     <button type="submit" className="btn btn-primary" onClick={ this.publish }>Submit</button>
+                    
+                    */}
                 </div>
                 </form>
-                <button type="submit" className="btn btn-primary" onClick={ this.publish }>Show selection</button>
 
+                {/** Paypal Button */}
+                { this.state.showMessage && this.state.METHOD_OF_PAYMENT=="paypal" && (<div style={{paddingTop:"20px", display:"absolute"}}>
+                    <PayPalButton style={{topPadding:"20px"}}
+                        amount="5"
+                        // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
+                        onSuccess={(details, data) => {
+                        alert("Transaction completed by " + details.payer.name.given_name);
 
-                <PayPalButton
-                    amount="5"
-                    // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
-                    onSuccess={(details, data) => {
-                    alert("Transaction completed by " + details.payer.name.given_name);
+                        // OPTIONAL: Call your server to save the transaction
+                        return fetch("/", {
+                            method: "post",
+                            body: JSON.stringify({
+                                orderID: data.orderID.id,
+                                steam_id: this.state.STEAM_ID
+                            })
+                        }).then("Payment successful for" + console.log(this.state.STEAM_ID));
+                        }}
 
-                    // OPTIONAL: Call your server to save the transaction
-                    return fetch("/paypal-transaction-complete", {
-                        method: "post",
-                        body: JSON.stringify({
-                            orderID: data.orderID,
-                            steam_id: this.state.STEAM_ID
-                        })
-                    });
-                    }}
-
-                    options={{
-                        clientId: "VBB9DWZSGCPC4"  //"PRODUCTION_CLIENT_ID"
-                      }}
-                />    
+                        options={{
+                            clientId: "VBB9DWZSGCPC4"  //"PRODUCTION_CLIENT_ID"
+                        }}
+                    />    
+                </div>) }      
+                
 
             </div>
         )

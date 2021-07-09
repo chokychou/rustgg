@@ -6,7 +6,7 @@ services:
     container_name: rustgg_container
     restart: always
     env_file:
-      - django.env
+      - backend/.env
     ports:
       - "8000:8000"
     command:
