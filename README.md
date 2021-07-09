@@ -1,10 +1,10 @@
 # A website for rustgo servers.
 
-# Frontend
+## Frontend
 Includes static files
 
-# Backend
+## Backend
 API calls and databases
 
-# Ngix
+## Ngix
 Load balancer, proxies
