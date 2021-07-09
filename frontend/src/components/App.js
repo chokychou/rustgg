@@ -14,7 +14,9 @@ import Servers from './Servers'
 import Payment from './Payment'
 import "./w3.css"
 
+
 class App extends Component {
+  
     render() {
         return (
           <Router>
