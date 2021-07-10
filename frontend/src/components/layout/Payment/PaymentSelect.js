@@ -100,7 +100,7 @@ export default class PaymentSelect extends Component {
                 </form>
 
                 {/** Paypal Button */}
-                { this.state.showMessage && this.state.METHOD_OF_PAYMENT=="paypal" && (<div style={{paddingTop:"20px", display:"absolute"}}>
+                { this.state.showMessage && this.state.METHOD_OF_PAYMENT==="paypal" && (<div style={{paddingTop:"20px", display:"absolute"}}>
                     <PayPalButton style={{topPadding:"20px"}}
                         amount="5"
                         // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
@@ -108,13 +108,13 @@ export default class PaymentSelect extends Component {
                         alert("Transaction completed by " + details.payer.name.given_name);
 
                         // OPTIONAL: Call your server to save the transaction
-                        return fetch("/", {
+                        return fetch("/api/update-new-purchase/", {
                             method: "post",
                             body: JSON.stringify({
-                                orderID: data.orderID.id,
+                                orderID: data.orderID,
                                 steam_id: this.state.STEAM_ID
                             })
-                        }).then("Payment successful for" + console.log(this.state.STEAM_ID));
+                        }).then(console.log("Payment successful.\n Order id: " + data.orderID + "\n Steam id:" + this.state.STEAM_ID));
                         }}
 
                         options={{

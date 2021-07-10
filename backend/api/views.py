@@ -6,7 +6,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializers import HistorySerializer
 from .models import History
-
+from .toJson import *
 # Create your views here.
 
 @api_view(['GET'])
@@ -27,9 +27,36 @@ def puchaseHistory(request):
 
 @api_view(['POST'])
 def updateNewPurchase(request):
-    serializer = HistorySerializer(data=request.data)
+    
+    '''
+    try: 
+        queryData = json_loads_byteified(request.data['_content'])
+        serializer = HistorySerializer(data=queryData)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+            
+        return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
+
+    except:
+        serializer = HistorySerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
+            
+        return Response(request.data)
+    '''
+    try:
+        queryData = json_load_byteified(request)
+        queryData = json.loads(queryData)
+    except:
+        pass
+        
+    serializer = HistorySerializer(data=queryData)
+    
     if serializer.is_valid():
         serializer.save()
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(queryData, status=status.HTTP_201_CREATED)
         
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    return Response(queryData, status=status.HTTP_400_BAD_REQUEST)
+
