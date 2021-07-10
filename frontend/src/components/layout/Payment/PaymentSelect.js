@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { PayPalButton } from "react-paypal-button-v2";
 
-import Paypal_Button from './Paypal_Button'
 import alipay from "./src/alipay.svg"
 import wechat from "./src/wechat.svg"
 import paypal from "./src/paypal.svg"
@@ -54,12 +53,6 @@ export default class PaymentSelect extends Component {
 
 
     render() {
-        if (this.state.isCheckout && this.state.METHOD_OF_PAYMENT=="paypal") {
-            return (<Paypal_Button 
-                    steam_id={this.state.STEAM_ID}
-                    />)
-        }
-
         return (
             <div className="PaymentSelect">
                 <div className="container">

@@ -16,6 +16,8 @@ services:
     build: 
       context: ./frontend
     container_name: react_container
+    ports:
+      - "3000:3000"
     command:
       "npm run start"
     volumes: 
@@ -26,7 +28,7 @@ services:
     image: nginx:1.17
     container_name: ngx
     ports:
-      - "80:8080"
+      - "8080:8080"
     volumes:
       - ./nginx:/etc/nginx/conf.d
       - react_build:/var/www
