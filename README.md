@@ -1,7 +1,11 @@
 # A website for rustgo servers.
 
 ## Frontend
-Includes static files
+The frontend app includes static files.
+
+The following steps let you run only the frontend app. ```cd ./rustgg/frontend``` <br />
+Install dependencies ```npm install``` <br />
+Update packages ```npm``` <br />
 
 ## Backend
 API calls and databases
