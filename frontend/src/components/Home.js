@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import NavWrapper from './layout/NavWrapper';
-import LogoWrapper from './layout/LogoWrapper.js';
 import BodyWrapper from './layout/BodyWrapper';
+import FootWrapper from './layout/FootWrapper';
 
 const divStyle = {
     color: 'blue',
@@ -14,7 +14,8 @@ export default class Home extends Component {
         return (
             <div className ="react" id="ReactWrapper" style={divStyle}>
                 <NavWrapper />
-                <BodyWrapper />
+                <BodyWrapper />  
+                <FootWrapper />
             </div>
         )
     }
