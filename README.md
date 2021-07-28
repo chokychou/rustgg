@@ -13,4 +13,6 @@ API calls and databases
 ## Ngix
 Load balancer, proxies
 
-!! make sure to adding following secret files before compilation: .env
+
+## Deployment
+!! make sure to adding following secret files before compilation: .pub, .backend/.env, .backend/utils/credentials.py
