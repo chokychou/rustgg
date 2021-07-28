@@ -1,0 +1,41 @@
+version: "3.7"
+
+services:
+  backend:
+    build: 
+      context: ./backend
+    container_name: rustgg_container
+    env_file:
+      - backend/.env
+    ports:
+      - "8000:8000"
+    command:
+      "gunicorn mysite.wsgi --workers=2 --bind=0.0.0.0:8000 "
+  
+  frontend:
+    build: 
+      context: ./frontend
+    container_name: react_container
+    ports:
+      - "3000:3000"
+    command:
+      "npm run start"
+    volumes: 
+      - react_build:/frontend/build
+      - node-modules:/frontend/node_modules
+    
+  nginx:
+    image: nginx:1.17
+    container_name: ngx
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - react_build:/var/www
+    depends_on:
+      - backend
+      - frontend
+
+volumes:
+  react_build:
+  node-modules:

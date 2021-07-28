@@ -1,0 +1,10 @@
+asgiref==3.3.4
+Django==3.2
+djangorestframework==3.12.4
+gunicorn==20.0.4
+pytz==2020.1
+django-paypal==1.1.1
+sqlparse==0.4.1
+psycopg2==2.9.1
+python-dotenv==0.18.0
+websockets==9.1
