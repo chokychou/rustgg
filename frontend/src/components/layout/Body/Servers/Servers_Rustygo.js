@@ -5,10 +5,12 @@ import React, { Component } from 'react'
 import "./styles.css"
 
 export default class Servers_Rustygo extends Component {
-    
-    render() {
+    constructor(props) {
+        super(props);
+        this.state = { server: 'connect 139.99.49.142:28018' };
+      }
 
-          
+    render() {
         return (
             <div className="card transition">
                 <h2 className="transition">Rustygo
@@ -17,7 +19,7 @@ export default class Servers_Rustygo extends Component {
                 
                 </h2>
                 <div className="cta-container transition">
-                    <button className="cta" onclick="">Connect</button>
+                    <button className="cta" onClick={() => {navigator.clipboard.writeText(this.state.server)}}>Connect</button>
                     </div>
             </div>
 

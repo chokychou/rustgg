@@ -7,7 +7,11 @@ from rest_framework.response import Response
 from .serializers import HistorySerializer
 from .models import History
 import json
-# Create your views here.
+
+'''packages for sending commands''' 
+from .utils.send_command import *
+from .utils.credentials import Credentials
+from .utils.commands import Command
 
 @api_view(['GET'])
 def apiOverview(request):
@@ -30,20 +34,14 @@ def updateNewPurchase(request):
     if type(request.data) is str:
         queryData = json.loads(request.data)
         serializer = HistorySerializer(data=queryData)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(queryData,status=status.HTTP_201_CREATED)
-            
-        return Response(queryData,status=status.HTTP_400_BAD_REQUEST)
-
-        
     else:
         queryData=request.data
         serializer = HistorySerializer(data=queryData)
 
-        if serializer.is_valid():
-            serializer.save()
-            return Response(queryData,status=status.HTTP_201_CREATED)
-            
-        return Response(queryData,status=status.HTTP_400_BAD_REQUEST)
-
+    if serializer.is_valid():
+        serializer.save()
+        print('\n')
+        send_command('rustyfire',76561198189931753)
+        return Response(queryData,status=status.HTTP_201_CREATED)
+        
+    return Response(queryData,status=status.HTTP_400_BAD_REQUEST)

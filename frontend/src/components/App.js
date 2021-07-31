@@ -24,7 +24,7 @@ class App extends Component {
             <div>
               <Switch>
                 <Route path="/payment-complete">
-                  <Payment />
+                  <ThankYou />
                 </Route>
 
                 <Route path="/payment">
