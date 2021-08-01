@@ -2,7 +2,12 @@ from .credentials import Credentials
 from .commands import Command
 import asyncio
 
-async def send_command(server=None, user=None) -> None:
+"""
+List of servers:
+rustyfire
+rustygo
+"""
+def send_command(server=None, user=None) -> None:
     """
     Send command to the game server.
     """

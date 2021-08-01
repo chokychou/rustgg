@@ -7,6 +7,7 @@ from rest_framework.response import Response
 from .serializers import HistorySerializer
 from .models import History
 import json
+import asyncio
 
 '''packages for sending commands''' 
 from .utils.send_command import *
@@ -40,8 +41,13 @@ def updateNewPurchase(request):
 
     if serializer.is_valid():
         serializer.save()
-        print('\n')
-        send_command('rustyfire',76561198189931753)
+        send_command('rustygo',queryData['steam_id'])
         return Response(queryData,status=status.HTTP_201_CREATED)
         
     return Response(queryData,status=status.HTTP_400_BAD_REQUEST)
+
+"""
+{
+    "steam_id":"76561198189931753"
+}
+"""

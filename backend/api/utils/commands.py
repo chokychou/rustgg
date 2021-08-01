@@ -23,7 +23,7 @@ class Command:
         
     def _setMessage(self):
         self.msg = {
-            'Message': 'o.usergroup remove ' + self.user + ' raideasy', 
+            'Message': 'o.usergroup add ' + self.user + ' vip', 
             'Type': 'Command'
         }
     
@@ -36,4 +36,4 @@ class Command:
                 greeting = await websocket.recv()
                 print(json.loads(greeting))
 
-        asyncio.get_event_loop().run_until_complete(hello())
+        asyncio.run(hello())

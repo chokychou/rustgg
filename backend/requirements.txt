@@ -8,3 +8,4 @@ sqlparse==0.4.1
 psycopg2==2.9.1
 python-dotenv==0.18.0
 websockets==9.1
+django-apscheduler==0.6.0
