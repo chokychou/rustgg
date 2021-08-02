@@ -17,6 +17,7 @@ var sectionStyle = {
 var container ={
     height: "100%",
     position: "relative",
+    
 }
 
 var center = {

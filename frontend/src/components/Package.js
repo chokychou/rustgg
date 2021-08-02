@@ -7,7 +7,8 @@ import FootWrapper from './layout/FootWrapper';
 const divStyle = {
     color: 'black',
     minHeight: "100%",
-    backgroundColor:'white'
+    backgroundColor:'white',
+    height:"100vh"
 };
 
 export default class Package extends Component {

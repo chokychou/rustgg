@@ -6,14 +6,18 @@ import Servers_MoPVE from "./Body/Servers/Servers_MoPVE"
 import Servers_Huopin from "./Body/Servers/Servers_Huopin"
 
 import "./Body/Servers/styles.css"
-const divStyle = {
-    color: 'blue',
+const container = {
+    zIndex:"1",
+    position:"relative",
+    display:"flex",
+    flexFlow: 'column',
+    height: '90%'
 };
 
 export default class ServerWrapper extends Component {
     render() {
         return (
-            <div className="ServerWrapper container w3-padding-64" >
+            <div className="ServerWrapper container w3-padding-64" style={ container }>
                 <h1 className="display-1">Our Servers</h1>
                 <span> &nbsp;</span>
                 <div>

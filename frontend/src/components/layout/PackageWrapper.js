@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
 
+const container = {
+    zIndex:"1",
+    position:"relative",
+    display:"flex",
+    flexFlow: 'column',
+    height: '90%'
+};
 
 export default class PackageWrapper extends Component {
     render() {
         return (
-            <div className="ServerWrapper">
+            <div className="ServerWrapper" style={ container }>
                 <div className="container w3-padding-64">
                     <h1 className="display-1">List of Packages</h1>
                     <p>All revenue from VIP and Kits go directly into maintaining our server and improving our services. We never planned on making money off our servers simply because we love Rust for what it is. All of our servers are hosted on Dedicated Servers which are more expensive than shared servers. And we also have a better firewall to defend against malicious DDoS attacks. We have full control on every aspect of our servers as we built it from scratch. It is an honor to host Rust servers for our community to play on. And we appreciate your contribution in making Rustgg possible.</p>

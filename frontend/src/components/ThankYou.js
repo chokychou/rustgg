@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 
 const divStyle = {
-    color: 'blue',
+    color: 'black',
+    minHeight: "100%",
+    backgroundColor:'white',
+    height:"100vh"
 };
 
 export default class ThankYou extends Component {
