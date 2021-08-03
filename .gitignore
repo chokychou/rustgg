@@ -112,4 +112,3 @@ ENV/
 rustgg
 rustgg.pub
 *.pub
-credentials.py
