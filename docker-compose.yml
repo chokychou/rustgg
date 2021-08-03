@@ -28,7 +28,7 @@ services:
     image: nginx:1.17
     container_name: ngx
     ports:
-      - "8080:8080"
+      - "80:8080"
     volumes:
       - ./nginx:/etc/nginx/conf.d
       - react_build:/var/www
