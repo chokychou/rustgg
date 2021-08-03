@@ -18,3 +18,7 @@ class Credentials:
     def RUSTYGO(self) -> None:
         self.ADDRESS = os.getenv('RUSTYGO_ADDR')
         self.PASSWORD = os.getenv('RUSTYGO_PW')
+        
+    def MORUST(self) -> None:
+        self.ADDRESS = os.getenv('MORUST_ADDR')
+        self.PASSWORD = os.getenv('MORUST_PW')

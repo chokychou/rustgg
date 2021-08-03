@@ -4,18 +4,18 @@ import React, { Component } from 'react'
 
 import "./styles.css"
 
-export default class Servers_Rustygo extends Component {
+export default class Servers_MoPVE_en extends Component {
     constructor(props) {
         super(props);
-        this.state = { server: 'connect 139.99.49.142:28018' };
+        this.state = { server: 'connect 223.85.52.137:6221' };
       }
 
     render() {
         return (
             <div className="card transition">
-                <h2 className="transition">Rustygo
+                <h2 className="transition">MoRust
                 <br/>
-                <small>Our legacy server, with more than 50 concurrent players and a player base of over 2,800. <br/> <span><b>The server is currently offline.</b></span></small>
+                <small>Our legacy server, with more than 50 concurrent players and a player base of over 2,800. <br/> <span>In this server, you will join other player groups to fight zombies and survive!</span></small>
                 
                 </h2>
                 <div className="cta-container transition">

@@ -15,9 +15,9 @@ var sectionStyle = {
   };
 
 var container ={
-    height: "100%",
+    display:"flex",
+    flexFlow: 'column',
     position: "relative",
-    
 }
 
 var center = {
@@ -25,7 +25,7 @@ var center = {
     position: "absolute",
     top: "50%",
     left: "50%",
-    transform: "translate(-50%, 0%)"
+    transform: "translate(-50%, 0%)",
   }
 
 
