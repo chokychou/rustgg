@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Servers_MoPVE_en from "./Body/Servers/Servers_MoPVE_en"
-import Servers_MoPVP from "./Body/Servers/Servers_MoPVP"
 import Servers_MoPVE from "./Body/Servers/Servers_MoPVE"
 
 import "./Body/Servers/styles.css"
@@ -20,9 +19,7 @@ export default class ServerWrapper extends Component {
                 <span> &nbsp;</span>
                 <div>
                     <div style={{alignItems:"center",paddingLeft:"30px",display:"inline-block"}}><Servers_MoPVE_en /></div>
-                    <div style={{alignItems:"center",paddingLeft:"30px",display:"inline-block"}}><Servers_MoPVP /></div>
                     <div style={{alignItems:"center",paddingLeft:"30px",display:"inline-block"}}><Servers_MoPVE /></div>
-                    
                 </div>
                 
             </div>

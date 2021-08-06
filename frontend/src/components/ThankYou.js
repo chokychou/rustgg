@@ -11,7 +11,7 @@ export default class ThankYou extends Component {
     render() {
         return (
             <div className ="react" id="ReactWrapper" style={divStyle}>
-                <p>Thanks for the payment.</p>
+                <p>Thanks for the payment. Your vip status has been updated.</p>
             </div>
         )
     }

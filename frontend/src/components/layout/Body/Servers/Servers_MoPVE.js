@@ -8,7 +8,7 @@ export default class Servers_MoPVE extends Component {
     render() {
         return (
             <div className="card transition">
-                <h2 className="transition">墨PVE
+                <h2 className="transition">MORUST CN
                 <br/>
                 <small>加入2000+玩家的pve吧。</small>
                 </h2>

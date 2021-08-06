@@ -13,7 +13,7 @@ export default class Servers_MoPVE_en extends Component {
     render() {
         return (
             <div className="card transition">
-                <h2 className="transition">MoRust
+                <h2 className="transition">MORUST SG
                 <br/>
                 <small>Our legacy server, with more than 50 concurrent players and a player base of over 2,800. <br/> <span>In this server, you will join other player groups to fight zombies and survive!</span></small>
                 
