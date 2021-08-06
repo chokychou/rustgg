@@ -5,7 +5,7 @@ The frontend app includes static files.
 
 The following steps let you run only the frontend app. ```cd ./rustgg/frontend``` <br />
 Install dependencies ```npm install``` <br />
-Update packages ```npm .``` <br />
+Update packages ```npm fund``` <br />
 Run react ```npm start``` <br />
 
 ## Backend
