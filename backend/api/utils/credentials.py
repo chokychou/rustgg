@@ -10,6 +10,7 @@ class Credentials:
     def __init__(self, server=None) -> None:
         if server=='rustyfire': self.RUSTYFIRE() 
         if server=='rustygo': self.RUSTYGO()
+        if server=='morust': self.RUSTYGO()
     
     def RUSTYFIRE(self) -> None:
         self.ADDRESS = os.getenv('RUSTYFIRE_ADDR')

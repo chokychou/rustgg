@@ -41,13 +41,7 @@ def updateNewPurchase(request):
 
     if serializer.is_valid():
         serializer.save()
-        send_command('rustygo',queryData['steam_id'])
+        send_command('morust',queryData['steam_id'])
         return Response(queryData,status=status.HTTP_201_CREATED)
         
     return Response(queryData,status=status.HTTP_400_BAD_REQUEST)
-
-"""
-{
-    "steam_id":"76561198189931753"
-}
-"""
