@@ -7,7 +7,7 @@ import "./styles.css"
 export default class Servers_MoPVE_en extends Component {
     constructor(props) {
         super(props);
-        this.state = { server: 'connect 223.85.52.137:6221' };
+        this.state = { server: 'connect 103.53.126.238:28045' };
       }
 
     render() {
