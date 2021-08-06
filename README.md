@@ -20,4 +20,5 @@ Load balancer, proxies
 
 
 ## Deployment
-!! make sure to adding following secret files before compilation: .pub, .backend/.env, .backend/utils/credentials.py
+make sure to adding following secret files before compilation: .backend/.env
+To build the docker image ```docker-compose up --build -d```
