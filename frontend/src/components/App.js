@@ -11,7 +11,8 @@ import Home from './Home'
 import Package from './Package'
 import RulesFAQ from './RulesFAQ'
 import Servers from './Servers'
-import Payment from './Payment'
+import PaymentSG from './PaymentSG'
+import PaymentCN from './PaymentCN'
 import ThankYou from './ThankYou'
 import "./w3.css"
 
@@ -27,8 +28,12 @@ class App extends Component {
                   <ThankYou />
                 </Route>
 
-                <Route path="/payment">
-                  <Payment />
+                <Route path="/payment-sg">
+                  <PaymentSG />
+                </Route>
+
+                <Route path="/payment-cn">
+                  <PaymentCN />
                 </Route>
 
                 <Route path="/package">

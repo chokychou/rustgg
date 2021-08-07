@@ -18,7 +18,7 @@ export default class PackageWrapper extends Component {
                     <span> &nbsp;</span>
                     <div className="card text-center" style={{ width: "auto"}} id="Singapore">
                         <div className="card-body">
-                            <h5 className="card-title">Morust Server VIP</h5>
+                            <h5 className="card-title">Morust SG VIP</h5>
                             <span> &nbsp;</span>
                             <h1 className="card-title pricing-card-title">$5</h1>
                             <span> &nbsp;</span>
@@ -29,11 +29,31 @@ export default class PackageWrapper extends Component {
 
                             <li>Increasing drop rate</li>
                             <li>More powerful starting Weapons</li>
-                            <li>Becoming a sponsor and VIP on Morust!</li>
+                            <li>Becoming a sponsor and VIP on Morust SG!</li>
                             <li> &nbsp;</li>
                         </ul>
-                            <a href="/payment" className="btn btn-primary btn-lg active btn-block" role="button" aria-pressed="true">Buy it Now!</a>
+                            <a href="/payment-sg" className="btn btn-primary btn-lg active btn-block" role="button" aria-pressed="true">Buy it Now!</a>
                     </div>
+                    <span> &nbsp;</span>
+                    <div className="card text-center" style={{ width: "auto"}} id="Singapore">
+                        <div className="card-body">
+                            <h5 className="card-title">Morust CN VIP</h5>
+                            <span> &nbsp;</span>
+                            <h1 className="card-title pricing-card-title">$5</h1>
+                            <span> &nbsp;</span>
+                        </div>
+                        <ul className="list-group list-group-flush">
+                            <li> &nbsp;</li>
+                            <li><strong>Benefits:</strong></li>
+
+                            <li>Increasing drop rate</li>
+                            <li>More powerful starting Weapons</li>
+                            <li>Becoming a sponsor and VIP on Morust CN!</li>
+                            <li> &nbsp;</li>
+                        </ul>
+                            <a href="/payment-cn" className="btn btn-primary btn-lg active btn-block" role="button" aria-pressed="true">Buy it Now!</a>
+                    </div>
+
                 </div>
             </div>
         )

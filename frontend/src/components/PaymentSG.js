@@ -10,7 +10,7 @@ const divStyle = {
     height:"100vh"
 };
 
-export default class RulesFAQ extends Component {
+export default class PaymentSG extends Component {
     render() {
         return (
             <div className ="react" id="ReactWrapper" style={divStyle}>
