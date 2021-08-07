@@ -8,7 +8,6 @@ const divStyle = {
     color: 'black',
     minHeight: "100%",
     backgroundColor:'white',
-    height:"100vh"
 };
 
 export default class Home extends Component {

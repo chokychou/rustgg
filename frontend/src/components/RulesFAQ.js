@@ -6,7 +6,7 @@ import "./w3.css"
 
 const divStyle = {
     color: 'black',
-    minHeight: "100%",
+    minHeight: "100vh",
     backgroundColor:'white',
     height:"100vh"
 };
