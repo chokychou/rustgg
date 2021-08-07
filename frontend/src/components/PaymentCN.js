@@ -24,12 +24,6 @@ const container = {
 
 var fit = {
     display: "block",
-    maxWidth:"80%",
-    maxHeight:"80%",
-    textAlign: "center",
-    marginLeft: "auto",
-    marginRight: "auto",
-    width: "80%"
 }
 
 
@@ -39,7 +33,6 @@ export default class PaymentSG extends Component {
             <div className ="react" id="ReactWrapper" style={divStyle}>
                 <NavWrapper />
                 <div className="ServerWrapper container w3-padding-64" style={ container }>
-                    <h1 className="display-1">Payment Method</h1>
                     <span> &nbsp;</span>
                     <div className="container">
                     <div className="row">
@@ -47,8 +40,8 @@ export default class PaymentSG extends Component {
                 </div>
                 
                     <div className="PaymentSelect">
-                        <p>Please scan the QR code below to complete the transaction.</p>
-                        <div className="col-sm"><img style={fit} src={QR} alt="" /></div>
+                        <h3>Please scan the QR code below to complete the transaction.</h3>
+                        <div className=""><img style={fit} src={QR} alt="" /></div>
                     </div>
                 </div>
                 <FootWrapper />
