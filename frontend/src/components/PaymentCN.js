@@ -43,8 +43,6 @@ export default class PaymentSG extends Component {
                     <span> &nbsp;</span>
                     <div className="container">
                     <div className="row">
-                        <div className="col-sm"><img style={fit} src={alipay} alt="" /></div>
-                        <div className="col-sm"><img style={fit} src={wechat} alt="" /></div>
                     </div>
                 </div>
                 
