@@ -19,7 +19,10 @@ export default class Servers_MoPVE_en extends Component {
                 
                 </h2>
                 <div className="cta-container transition">
-                    <button className="cta" onClick={() => {navigator.clipboard.writeText(this.state.server)}}>Connect</button>
+                    {/**
+                    *<button className="cta" onClick={() => {navigator.clipboard.writeText(this.state.server)}}>Connect</button>
+                     */}
+                    <button className="cta" >Connect</button>
                     </div>
             </div>
 
