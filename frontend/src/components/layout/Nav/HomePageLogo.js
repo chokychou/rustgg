@@ -29,7 +29,10 @@ export default class HomePageLogo extends Component {
                     <div className="dropdown-menu dropdown-menu-button0" aria-labelledby="dropdownMenuButton" id="dropdownMenu">
                     <a className="dropdown-item" href="/">Home</a>
                     <a className="dropdown-item" href="/servers">Servers</a>
-                    <a className="dropdown-item" href="/rules">Rules & FAQ</a>
+                    {/**
+                     *<a className="dropdown-item" href="/rules">Rules & FAQ</a>
+                     */}
+                    
                     <a className="dropdown-item" href="/package">Package</a>
                     </div>
             </div>
